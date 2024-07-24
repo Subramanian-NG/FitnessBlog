@@ -6,7 +6,13 @@ export async function GET(req: Request) {
    
     try{
     const posts = await getAllLatestPosts();
-    return Response.json({ posts })
+    // return Response.json({ posts })
+    return new Response(JSON.stringify({ posts }), {
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+        },
+    });
     }
     catch(error)
     {
