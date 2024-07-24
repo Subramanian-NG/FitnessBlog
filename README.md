@@ -41,15 +41,23 @@ Deployed link in vercel -
  - My blogs page including search by 'my posts'
 
 ## Krutarth Patel
-- Share functionality.    
-- Detailed Post functionality
+- Share functionality.
+![alt text](image-1.png)    ![alt text](image-2.png)
+- Detailed Post functionality  
+![alt text](image-8.png)
 - Styled all pages for a consistent and professional look.
+![alt text](image-3.png) ![alt text](image-4.png) ![alt text](image-5.png)
 - Resolved various bugs to improve functionality and user experience.
 - Developed an edit profile page, later scrapped.
+![alt text](image-6.png)
+
 
 
 ## Abhik Patel 
 - Created login signup page(later scraped because we used nextauth)
-- Styled all pages for good user experience. 
+- Styled all pages for good user experience.
+![alt text](image-8.png) 
 - Created and styled bookmark and share components (UI)
+![alt text](image-9.png)
 - Added option to subscribe and redesigned footer component.(worked on storing emails of subscribers)
+![alt text](image-7.png)
