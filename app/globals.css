@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #ffffff; /* Set the background color to white */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.auth-toggle {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.auth-toggle button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.auth-toggle .active {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000; /* Ensure label text is black */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #000; /* Ensure input text is black */
+  background-color: #fff; /* Ensure input background color is white */
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  color: #000; /* Ensure button text is black by default */
+}
+
+input, textarea {
+  color: #000; /* Ensure input and textarea text is black */
+  background-color: #fff; /* Ensure input and textarea background is white */
+}
+
+input::placeholder, textarea::placeholder {
+  color: #888; /* Placeholder text color */
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0070f3; /* Border color on focus */
+  box-shadow: 0 0 0 1px #0070f3; /* Box shadow on focus */
+}
+
+.profile-picture {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-cover: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-picture-placeholder {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.profile-picture-label {
+  cursor: pointer;
+  color: #0070f3;
+  text-decoration: underline;
+}
