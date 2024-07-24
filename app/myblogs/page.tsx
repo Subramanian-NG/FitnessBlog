@@ -45,7 +45,7 @@ export default function Page() {
     }, [session?.user?.email]);
 
     async function getDataForCurrentUser() {
-        const posts1 = await fetch(`http://localhost:3000/api/blogs?email=` + session?.user?.email, {
+        const posts1 = await fetch(`/api/blogs?email=` + session?.user?.email, {
             next: { revalidate: 0 },
         }).then((res) => res.json());
         setPosts(posts1.posts);
@@ -71,7 +71,7 @@ export default function Page() {
         formData.append('title', new_post.title);
         formData.append('content', new_post.content);
         formData.append('category', new_post.category);
-        const response = await fetch('http://localhost:3000/api/blogs', {
+        const response = await fetch('/api/blogs', {
             method: 'POST',
             body: formData,
         });
@@ -98,7 +98,7 @@ export default function Page() {
         formData.append('title', new_post.title);
         formData.append('content', new_post.content);
         formData.append('category', new_post.category);
-        const response = await fetch('http://localhost:3000/api/blogs', {
+        const response = await fetch('/api/blogs', {
             method: 'PUT',
             body: formData,
         });

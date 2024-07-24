@@ -9,7 +9,7 @@ const SignIn = () => {
 
   const handleDBadd = async () => {
     if (session) {
-      const users = await fetch('http://localhost:3000/api/users', {
+      const users = await fetch('/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ selectedCategories, onSearch, onC
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/category');
+      const response = await fetch('/api/category');
       if (!response.ok) {
         throw new Error('Failed to fetch categories');
       }

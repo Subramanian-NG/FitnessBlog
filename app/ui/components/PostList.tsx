@@ -28,7 +28,7 @@ interface Post {
     useEffect(() => {
       const fetchPosts = async () => {
         try {
-          const response = await fetch('http://localhost:3000/api/blogs/latest', {
+          const response = await fetch('/api/blogs/latest', {
             next: { revalidate: 0 },
           });
           const data = await response.json();
