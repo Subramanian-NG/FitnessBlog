@@ -29,7 +29,7 @@ if (!uri) {
     throw new Error("DB connection string not present");
 }
 
-client = new MongoClient(uri);
+client = new MongoClient(process.env.MONGODB_URI);
 
 clientPromise = client.connect();
 
